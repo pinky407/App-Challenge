@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>calculation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="wiform action="/action_page.php">
+
+</head>
+<body>
+
+    <center>
+        <h1>Average grade </h1>
+        <table>
+        <tr>
+            <td>
+                <label>grade 1: </label>
+                <input name="grade1" type="number" id="grade1" size="10" >
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td>
+                <label>grade 2: </label>
+                <input name="grade2" type="number" id="grade2" size="10" >
+            </td>
+         </tr>
+
+      
+         
+         <tr>
+            <td>
+                <label>grade 3: </label>
+                <input name="grade3" type="number" id="grade3" size="10" >
+            </td>
+         </tr>
+
+         <tr>
+                <td>
+                  <label>Avearage grade: </label>
+                  <span id="gradeaverage"></span>
+                </td>
+         </tr>
+         
+         <tr style="height: 1em"></tr>
+         <tr>
+         <td>
+                <div style="text-align: center;">
+                    <button id="button" >Calculate </button>
+                </div>
+         </td>
+        </tr>
+        </table>
+    </center>
+</body>
+
+<script>
+
+function aveargegrade() {
+         const grade1 = parseInt(document.getElementById("grade1").value);
+         const grade2 = parseInt(document.getElementById("grade2").value);
+         const grade3 = parseInt(document.getElementById("grade3").value);
+
+        let ans = (grade1 + grade2 + grade3)/3;
+        
+       
+        document.getElementById('gradeaverage').innerHTML = ans;
+        
+         
+      }
+      
+      document.getElementById('button').addEventListener('click', aveargegrade);
+</script>
